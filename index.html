@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kevin Allen Archive</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>The Legendary Kevin Allen Archive</h1>
+    <p>Click an image or video to view larger!</p>
+  </header>
+
+  <nav>
+    <button onclick="showCategory('images')">Images</button>
+    <button onclick="showCategory('videos')">Videos</button>
+    <button onclick="showCategory('gifs')">GIFs</button>
+  </nav>
+
+  <main id="gallery" class="gallery">
+    <!-- Images -->
+    <div class="category" id="images">
+      <!-- Auto-generated -->
+      <img src="images/kevin_image_01.jpg" alt="Kevin Image 1" onclick="openModal(this)">
+      <img src="images/kevin_image_02.png" alt="Kevin Image 2" onclick="openModal(this)">
+      <img src="images/kevin_image_03.jpg" alt="Kevin Image 3" onclick="openModal(this)">
+      <!-- etc. (add all images) -->
+    </div>
+
+    <!-- Videos -->
+    <div class="category" id="videos" style="display:none;">
+      <video src="videos/kevin_video_01.mp4" controls></video>
+      <video src="videos/kevin_video_02.mp4" controls></video>
+      <video src="videos/kevin_video_03.mp4" controls></video>
+      <!-- etc. (add all videos) -->
+    </div>
+
+    <!-- GIFs (empty for now) -->
+    <div class="category" id="gifs" style="display:none;">
+      <p>No GIFs available yet!</p>
+    </div>
+  </main>
+
+  <!-- Modal Viewer -->
+  <div id="modal" onclick="closeModal()">
+    <img id="modal-img" src="" alt="Expanded Kevin">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
